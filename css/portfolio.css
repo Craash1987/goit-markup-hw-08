@@ -331,15 +331,21 @@ img {
   height: 40px;
 }
 
+.close-icon {
+  padding: 11px;
+}
+
 .mobile-menu {
   position: fixed;
   background-color: #ffffff;
   max-width: 480px;
   width: 100%;
+  height: 100vh;
   padding: 48px 40px;
   position: absolute;
   top: 0;
   left: 50%;
+  border: 1px solid red;
   transform: translateX(-50%) translateY(-200%);
   z-index: 23;
   transition: transform 500ms linear;
