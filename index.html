@@ -18,7 +18,7 @@
 </head>
 <body>
 
-     <header class="header">
+     <header class="header line-header">
         <div class="container">
             <nav class="navigation">
         
@@ -36,6 +36,13 @@
                         <a class="navigation-list-link  link" href="#">Контакты</a> </li>
                 </ul>
             </nav>  
+
+            <button class="burger-mobile-btn" type="button" data-menu-button>
+                <svg class="burger-icon">
+                    <use href="./img/sprite.svg#menu_icon"></use>
+                </svg>
+            </button>
+
                 <!--Contacts menu-->
                 <ul class="navigation-list-header">
                     <li class="contact-list-mail list"> 
@@ -51,29 +58,64 @@
                             </svg>
                             +38 096 111 11 11</a> </li>
                 </ul>
+            <div class="mobile-menu" data-menu>
+                <button class="mobile-close-btn" type="button" data-menu-close>
+                    <svg class="close-icon">
+                        <use href="./img/sprite.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <div class="mobile-menu-wrapper">
+                    <ul class="mobile-menu-nav-lists">
+                        <li class="mobile-menu-nav-item list">
+                            <a class="mobile-menu-nav-link current-link link" href="./index.html">Студия</a>
+                        </li>
+                        <li class="mobile-menu-nav-item list">
+                            <a class="mobile-menu-nav-link link" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="mobile-menu-nav-item list">
+                            <a class="mobile-menu-nav-link  link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu-contacts">
+                        <li class="mobile-menu-contact-list-mail list">
+                            <a class="mobile-menu-contact-link-mail link" href="mailto:info@devstudio.com">
+                                <svg class="mobile-menu-contact-mail-icon" width="16" height="12">
+                                    <use href="./img/sprite.svg#icon-mail"></use>
+                                </svg>
+                                info@devstudio.com</a>
+                        </li>
+                        <li class="mobile-menu-contact-list-tel list">
+                            <a class="mobile-menu-contact-link-tel link" href="tel:+380961111111">
+                                <svg class="mobile-menu-contact-tel-icon" width="10" height="16">
+                                    <use href="./img/sprite.svg#icon-telephone"></use>
+                                </svg>
+                                +38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
         </div>   
      </header>
 
-     <div class="grey-line container"></div>
+     <!--<div class="container"></div>-->
 
-     <main class="main">
-
+    <main class="main"> 
         <!--the service-->
-         <section class="service">
+        <!--<section class="service">
             <div class="main-service container">
                 <h1 class="service-idea">Эффективные решения для вашего бизнеса</h1>
-                <!--order button-->
+
                 <button class="service-btn" type="button" data-modal-open>
                      <span class="text-btn">Заказать услугу</span>
                 </button>
             </div>
-         </section>
+         </section>--> 
 
          <!--advantage container-->
-         <section class="advantage-box">
-  
-             <!--About adventage-->
-             <div class="container">
+         <!-- <section class="advantage-box">
+               <div class="container">
                 <ul class="advantage-lists">
                     <li class="advantage-lists-list list">
                         <div class="trumb">
@@ -113,13 +155,12 @@
                     </li>
                 </ul>
              </div>    
-         </section>
+         </section> -->
 
         <!--work instrument-->
-         <section class="work-instrument">
+        <!--<section class="work-instrument">
             <div class="container">
                 <h2 class="work-title title">Чем мы занимаемся</h2>
-                    <!--instrument blok-->
                     <ul class="work-instrument-lists">
                         <li class="work-instrument-list list"> 
                             <img class="work-instrument-img" src="./img/img1.jpg" alt="box-1" width="370" height="294"> 
@@ -141,15 +182,13 @@
                         </li>
                     </ul>
             </div>
-         </section>
+         </section>--> 
 
         <!--About Work team-->
-         <section class="about-work-team">
+        <!--<section class="about-work-team">
              <div class="container">
                 <h2 class="our-work-team title">Наша команда</h2>
-                    <!--team card-->
                     <ul class="work-team-lists list">
-                        <!--Team card 1-->
                         <li class="work-team-card">
                             <img class="work-team-card-img" src="./img/img4.jpg" alt="team card-1" width="270" height="260">
                                  <div class="work-team-proffession">
@@ -187,8 +226,6 @@
                                     </ul>                          
                                  </div>
                         </li>
-
-                        <!--Team card 2-->
                         <li class="work-team-card list">
                             <img class="work-team-card-img" src="./img/img5.jpg" alt="team card-2" width="270" height="260">
                                  <div class="work-team-proffession">    
@@ -225,9 +262,7 @@
                                         </li>
                                     </ul>
                                  </div>
-                         </li>    
-
-                        <!--Team card 3-->                       
+                         </li>                        
                         <li class="work-team-card list">                   
                             <img class="work-team-card-img" src="./img/img6.jpg" alt="team card-3" width="270" height="260">
                                  <div class="work-team-proffession">
@@ -264,9 +299,7 @@
                                         </li>
                                     </ul>
                                  </div>
-                        </li>  
-                        
-                        <!--Team card 4-->                    
+                        </li>                  
                         <li class="work-team-card list">                  
                             <img class="work-team-card-img" src="./img/img7.jpg" alt="team card-4" width="270" height="260">
                                  <div class="work-team-proffession">    
@@ -306,9 +339,9 @@
                         </li>              
                     </ul>
              </div>
-         </section>
+         </section>--> 
          <!--Our klient-->
-         <section class="our-klient">
+        <!--<section class="our-klient">
              <div class="container">
                     <h2 class="our-klient-title title">Наши постоянные клиенты</h2>
                         <ul class="our-klient-list list">
@@ -356,17 +389,15 @@
                             </li>
                         </ul>
              </div>
-         </section>
-     </main>
-
-     <footer class="footer">
+         </section>--> 
+    </main>
+    
+    <!--<footer class="footer">
          <div class="container">
             <div class="footer-contant">
                 <div class="footter-address">
-                    <!--Adress-->
-                    <a class="logo-footer link" href="./index.html" lang="en">
-                    Web<span class="logo-footer-secondary">Studio</span></a>
-                    
+                     <a class="logo-footer link" href="./index.html" lang="en">
+                    Web<span class="logo-footer-secondary">Studio</span></a>                  
                     <address class="text-address">г. Киев, пр-т Леси Украинки, 26</address>
                     <ul class="contact-lists">
                         <li class="contact-list list">
@@ -411,7 +442,7 @@
                             </li>
                         </ul> 
                 </div>  
-                <!--Subscribe form-->
+
                 <form name="subscribe" class="send-form">
                     <h3 class="social-title-footer">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>
                     <div class="form-place">
@@ -422,10 +453,10 @@
                 </form>
             </div>    
          </div>
-     </footer>
+     </footer>--> 
 
     <!--Modal window-->
-    <div class="backdrop is-hidden" data-modal>
+   <!--<div class="backdrop is-hidden" data-modal>
         <div class="modal-window">
             <button class="modal-close" data-modal-close>
                 <svg width="11" height="11">
@@ -433,10 +464,9 @@
                 </svg>
             </button>
 
-             <!--Modal form-->
             <form class="contact-form" name="contact-form" autocomplete="on" novalidate>
                 <b class="contact-form-title">Оставьте свои данные, мы вам перезвоним</b>
-                <!--Name form-->
+
                 <div class="form-group"> 
                     <input type="text" name="name" id="name" class="form-input" />
                     <label for="name" class="form-label">Имя</label>
@@ -444,7 +474,7 @@
                         <use href="./img/sprite.svg#icon-person"></use>
                     </svg>
                 </div> 
-                <!--Tel form-->
+
                 <div class="form-group">
                     <input type="tel" name="tel" id="tel" class="form-input" />
                     <label for="tel" class="form-label">Телефон</label>
@@ -452,7 +482,7 @@
                         <use href="./img/sprite.svg#icon-phone"></use>
                     </svg>
                 </div>   
-                <!--Mail form-->
+ 
                 <div class="form-group">
                     <input type="email" name="email" id="email-data" class="form-input" />
                     <label for="email-data" class="form-label">Почта</label>
@@ -460,22 +490,24 @@
                         <use href="./img/sprite.svg#icon-email"></use>
                     </svg>
                 </div>
-                <!--Comment form-->
+
                 <div class="form-comment">
                     <label for="comment" class="comment-label">Комментарий</label>
                     <textarea name="comment" id="comment" placeholder="Введите текст" class="comment-place"></textarea>
                  </div>
-                <!--Checkbox form-->
+
                 <div class="form-checkbox">
                     <input type="checkbox" name="agreement" id="agreement" class="input-checkbox visually-hidden" />
                     <label for="agreement" class="label-checkbox">Соглашаюсь с рассылкой и принимаю <a href="" class="link-agreement"> Условия договора </a> </label>
                 </div>
-                <!--Button form-->    
+   
                 <button class="contact-form-btn" type="submit">Отправить</button>
             </form>
         </div>
-    </div>            
+    </div> -->         
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+
 </body>
 </html>

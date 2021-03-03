@@ -1,0 +1,53 @@
+.social-list,
+.social-list-footer {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.social-list-icon,
+.social-list-icon-footer {
+  display: inline-flex;
+  background-size: contain;
+  background-position: 50% 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.social-list-item,
+.social-list-item-footer {
+  width: 44px;
+  height: 44px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-list-link,
+.social-list-link-footer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  fill: currentColor;
+  color: $color-icon-our-klient;
+  background-color: $primary-white-color;
+
+  transition: fill $time $animation-function, color $time $animation-function,
+    background-color $time $animation-function;
+
+  &:hover,
+  &:focus {
+    fill: $primary-white-color;
+    background-color: $accent-color;
+  }
+}
+
+.social-list-link-footer {
+  fill: $primary-white-color;
+  background-color: $color-link-icon-footer;
+}

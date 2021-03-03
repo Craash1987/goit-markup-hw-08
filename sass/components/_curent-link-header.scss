@@ -1,0 +1,34 @@
+.navigation-list-item .navigation-list-link.current-link::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: $accent-color;
+  border-radius: 2px;
+  animation-name: scale;
+  animation-duration: 250ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  transform-origin: center left;
+}
+
+@keyframes scale {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.navigation-list-item {
+  position: relative;
+}
+
+.current-link {
+  color: $accent-color;
+}

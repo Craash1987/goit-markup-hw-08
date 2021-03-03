@@ -1,0 +1,22 @@
+.logo-header {
+  display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+}
+
+.logo-header,
+.logo-footer,
+.logo-header-secondary,
+.logo-footer-secondary {
+  font-family: $secondFont;
+  font-style: 700;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.192;
+  color: $accent-color;
+}
+
+.logo-header-secondary {
+  color: $title-text-color;
+}

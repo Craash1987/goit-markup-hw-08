@@ -1,0 +1,28 @@
+//UITLS
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+@import "./utils/placeholder";
+@import "./utils/media";
+@import "./utils/mixin";
+
+//BASE
+@import "./base/common";
+@import "./base/container";
+
+//COMPONENTS
+@import "./components/logo-header";
+@import "./components/logo-footer";
+@import "./components/title";
+@import "./components/service-btn";
+@import "./components/social-links-icon";
+@import "./components/curent-link-header";
+
+//LAYOUT
+@import "./layout/header-nav-mail-phone";
+@import "./layout/services";
+@import "./layout/advantages";
+@import "./layout/work-instrunents";
+@import "./layout/about-work-team";
+@import "./layout/our-klient";
+@import "./layout/footer";
+@import "./layout/modal-window";
