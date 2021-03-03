@@ -94,7 +94,7 @@
   @extend %link;
 }
 
-.mobile-menu-nav {
+.mobile-menu-nav-link {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: $title-text-color;
@@ -115,7 +115,7 @@
 
 .mobile-menu-nav-link {
   color: $title-text-color;
-  &.current {
+  &.current-link {
     color: $accent-color;
   }
 }
