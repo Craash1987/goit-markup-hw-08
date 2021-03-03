@@ -334,7 +334,7 @@ img {
 .mobile-menu {
   position: fixed;
   background-color: #ffffff;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   padding: 48px 40px;
   position: absolute;
@@ -373,8 +373,8 @@ img {
   }
 }
 
-.mobile-menu-nav-item:not(:last-child) {
-  margin-bottom: 35px;
+.mobile-menu-nav__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .mobile-menu-nav-link {
@@ -382,6 +382,10 @@ img {
 }
 .mobile-menu-nav-link.current-link {
   color: #2196f3;
+}
+
+.mobile-menu-contacts {
+  margin-top: 302px;
 }
 
 .mobile-menu-contact-link-mail,
@@ -472,45 +476,6 @@ img {
   justify-content: center;
   margin-left: 0;
   margin-right: 0;
-}
-
-.main {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.main-service {
-  width: 696px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.service {
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
-
-.service {
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background: #2f303a;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/Bg-index-1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.service-idea {
-  margin-bottom: 30px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.364;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #ffffff;
 }
 
 .advantage-box {

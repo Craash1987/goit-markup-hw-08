@@ -63,7 +63,7 @@
 .mobile-menu {
   position: fixed;
   background-color: $primary-white-color;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   padding: 48px 40px;
   position: absolute;
@@ -109,8 +109,8 @@
   }
 }
 
-.mobile-menu-nav-item:not(:last-child) {
-  margin-bottom: 35px;
+.mobile-menu-nav__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .mobile-menu-nav-link {
@@ -118,6 +118,10 @@
   &.current-link {
     color: $accent-color;
   }
+}
+
+.mobile-menu-contacts {
+  margin-top: 302px;
 }
 
 .mobile-menu-contact-link-mail,

@@ -339,7 +339,7 @@ img {
 .mobile-menu {
   position: fixed;
   background-color: #ffffff;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   padding: 48px 40px;
   position: absolute;
@@ -378,8 +378,8 @@ img {
   }
 }
 
-.mobile-menu-nav-item:not(:last-child) {
-  margin-bottom: 35px;
+.mobile-menu-nav__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .mobile-menu-nav-link {
@@ -387,6 +387,10 @@ img {
 }
 .mobile-menu-nav-link.current-link {
   color: #2196f3;
+}
+
+.mobile-menu-contacts {
+  margin-top: 302px;
 }
 
 .mobile-menu-contact-link-mail,
