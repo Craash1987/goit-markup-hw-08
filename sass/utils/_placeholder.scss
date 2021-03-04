@@ -3,12 +3,6 @@
   align-items: center;
 }
 
-%centered-flex-box {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 %list {
   margin: 0;
   padding: 0;
@@ -19,4 +13,10 @@
   margin-bottom: 0;
   text-decoration: none;
   font-style: normal;
+}
+
+%centered-flex-box {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }

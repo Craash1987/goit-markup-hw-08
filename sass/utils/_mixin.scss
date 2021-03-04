@@ -1,0 +1,14 @@
+@mixin centered-flex($type: flex) {
+  display: $type;
+  align-items: center;
+  justify-content: center;
+}
+@mixin position-element($type, $top: 0, $left: 0) {
+  position: $type;
+  top: $top;
+  left: $left;
+}
+@mixin section-padding($padding-top: 94px, $padding-bottom: 94px) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+}
