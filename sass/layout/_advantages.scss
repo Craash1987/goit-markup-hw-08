@@ -1,41 +1,33 @@
 .advantage-lists {
-  display: flex;
-  margin-left: 0;
-  margin-right: 0;
-}
+  @extend %list;
 
-.advantage-list {
-  width: 270px;
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: -15px;
+    margin-left: -15px;
   }
 }
+.advantage-list {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
-.advantage-list-item {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $title-text-color;
-}
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin: 15px;
+    width: calc((100% - 60px) / 2);
+  }
 
-.advantage-list-content {
-  font-size: 14px;
-  line-height: 1.8;
-  letter-spacing: 0.03em;
-}
-
-/*=====advantage icon=====*/
-
-.trumb {
-  @extend %flex-centered;
-  justify-content: center;
-  width: 270px;
-  height: 120px;
-  background-color: $background-work-team;
-  margin-bottom: 30px;
-  border-radius: 4px;
+  @media screen and (min-width: $desktop) {
+    margin-right: 15px;
+    margin-left: 15px;
+    width: calc((100% - 120px) / 4);
+  }
 }
 
 .advantage-img {
@@ -44,4 +36,36 @@
   display: flex;
   justify-content: center;
   fill: $color-icon-our-klient;
+}
+
+.advantage-list-item {
+  font-weight: bold;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: $title-text-color;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    text-align: left;
+  }
+}
+.advantage-list-content {
+  line-height: 1.714;
+  max-width: 450px;
+  height: 50px;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media screen and (min-width: $tablet) {
+    height: 75px;
+    width: 354px;
+  }
+  @media screen and (min-width: $desktop) {
+    height: 75px;
+    width: 270px;
+    margin-bottom: 0;
+  }
 }

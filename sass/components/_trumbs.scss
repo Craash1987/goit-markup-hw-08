@@ -1,0 +1,17 @@
+.thumb {
+  @include centered-flex();
+  background-color: #f5f4fa;
+  height: 120px;
+  max-width: 450px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $tablet) {
+    height: 120px;
+    width: 354px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 120px;
+    width: 270px;
+  }
+}

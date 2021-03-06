@@ -301,6 +301,28 @@ img {
   color: #2196f3;
 }
 
+.thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f4fa;
+  height: 120px;
+  max-width: 450px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .thumb {
+    height: 120px;
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .thumb {
+    height: 120px;
+    width: 270px;
+  }
+}
+
 .header {
   background-color: #ffffff;
   margin-bottom: 0%;
