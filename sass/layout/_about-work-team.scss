@@ -4,11 +4,12 @@
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
+    margin: 0 auto;
   }
 }
 
 .our-work-team {
+  display: block;
   font-weight: bold;
   font-size: 36px;
   line-height: 1.167;
@@ -24,6 +25,7 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: $title-text-color;
+  margin-bottom: 10px;
 }
 
 .work-team-profession {
@@ -54,11 +56,9 @@
     width: calc((100% - 60px) / 2);
   }
 
-  &:not(:last-child) {
-    @media screen and (min-width: $desktop) {
-      margin-right: 30px;
-      width: calc((100% - 120px) / 4);
-    }
+  @media screen and (min-width: $desktop) {
+    margin: 15px;
+    width: calc((100% - 120px) / 4);
   }
 }
 
@@ -80,5 +80,4 @@
 
 .work-team-card {
   position: unset;
-  width: 270px;
 }

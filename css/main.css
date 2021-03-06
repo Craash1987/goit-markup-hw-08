@@ -810,11 +810,12 @@ img {
   .work-team-lists {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
+    margin: 0 auto;
   }
 }
 
 .our-work-team {
+  display: block;
   font-weight: bold;
   font-size: 36px;
   line-height: 1.167;
@@ -830,6 +831,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-bottom: 10px;
 }
 
 .work-team-profession {
@@ -860,8 +862,8 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .work-team-card:not(:last-child) {
-    margin-right: 30px;
+  .work-team-card {
+    margin: 15px;
     width: calc((100% - 120px) / 4);
   }
 }
@@ -885,19 +887,48 @@ img {
 
 .work-team-card {
   position: unset;
-  width: 270px;
 }
 
 .our-klient-list {
   display: flex;
 }
+@media screen and (max-width: 1199px) {
+  .our-klient-list {
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
 
 .our-klient-list-item {
   width: 170px;
   height: 90px;
+  width: calc((100% - 30px) / 2);
 }
-.our-klient-list-item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .our-klient-list-item {
+    width: calc((100% - 30px * 2) / 2);
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .our-klient-list-item {
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .our-klient-list-item {
+    width: calc((100% - 90px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our-klient-list-item {
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .our-klient-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .our-klient-list-link {
