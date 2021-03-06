@@ -1,44 +1,118 @@
-// .main {
-//   margin-top: 0;
-//   margin-bottom: 0;
-// }
+.main {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-// .main-service {
-//   width: 696px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
+.service {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-color: $footer-service-background-color;
+  max-width: 480px;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../img/main/mobileHeader.jpg");
+  background-size: cover;
+  background-position: center;
 
-// .service {
-//   padding-top: 200px;
-//   padding-bottom: 200px;
-// }
+  @media screen and (min-width: $desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
 
-// .service {
-//   max-width: 1600px;
-//   height: 600px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   background: $footer-service-background-color;
-//   background-image: linear-gradient(
-//       to right,
-//       rgba(47, 48, 58, 0.4),
-//       rgba(47, 48, 58, 0.4)
-//     ),
-//     url(../img/Bg-index-1.jpg);
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center;
-// }
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+  screen and (min-resolution: 192dpi) and (min-width: 320px),
+  screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .service {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/main/mobileHeader@2x.jpg");
+  }
+}
 
-// .service-idea {
-//   margin-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .service {
+    max-width: 768px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/main/tabletHeader.jpg");
+  }
+}
 
-//   font-weight: 900;
-//   font-size: 44px;
-//   line-height: 1.364;
-//   text-align: center;
-//   letter-spacing: 0.06em;
-//   text-transform: uppercase;
-//   color: $primary-white-color;
-// }
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .service {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/main/tabletHeader@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .service {
+    max-width: 1600px;
+    height: 600px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/main/desktopHeader.jpg");
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .service {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../img/main/desktopHeader@2x.jpg");
+  }
+}
+
+.main-service {
+  max-width: 360px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 696px;
+  }
+}
+
+.service-idea {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.615;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $primary-white-color;
+  margin-top: 0%;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.363;
+  }
+}

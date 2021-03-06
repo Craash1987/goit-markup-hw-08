@@ -722,6 +722,87 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.main {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.service {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-color: #2f303a;
+  max-width: 480px;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/main/mobileHeader.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 1200px) {
+  .service {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 320px), screen and (min-resolution: 192dpi) and (min-width: 320px), screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .service {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/main/mobileHeader@2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .service {
+    max-width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/main/tabletHeader.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .service {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/main/tabletHeader@2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .service {
+    max-width: 1600px;
+    height: 600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/main/desktopHeader.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .service {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/main/desktopHeader@2x.jpg");
+  }
+}
+.main-service {
+  max-width: 360px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 1200px) {
+  .main-service {
+    max-width: 696px;
+  }
+}
+
+.service-idea {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.615;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 0%;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .service-idea {
+    font-size: 44px;
+    line-height: 1.363;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .advantage-lists {
     display: flex;
