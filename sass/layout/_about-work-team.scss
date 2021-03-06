@@ -1,23 +1,11 @@
-.about-work-team {
-  display: flex;
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .work-team-lists {
-  display: flex;
-}
+  @extend %list;
 
-.work-team-proffession {
-  padding: 30px 32px;
-}
-
-.work-team-title {
-  margin-bottom: 10px;
-}
-
-.about-work-team {
-  background: $background-work-team;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .our-work-team {
@@ -27,20 +15,6 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: $title-text-color;
-}
-
-.work-team-card {
-  position: unset;
-  width: 270px;
-
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  background: $primary-white-color;
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
 }
 
 .work-team-title {
@@ -53,6 +27,7 @@
 }
 
 .work-team-profession {
+  display: block;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.188;
@@ -60,4 +35,50 @@
   letter-spacing: 0.03em;
   color: $primary-text-color;
   margin-bottom: 16px;
+}
+
+.work-team-card {
+  background: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin: 15px;
+    width: calc((100% - 60px) / 2);
+  }
+
+  &:not(:last-child) {
+    @media screen and (min-width: $desktop) {
+      margin-right: 30px;
+      width: calc((100% - 120px) / 4);
+    }
+  }
+}
+
+.work-team-page {
+  padding: 24px;
+
+  @media screen and (min-width: $desktop) {
+    padding: 30px;
+  }
+}
+
+.work-team-card-img {
+  width: 100%;
+}
+
+.about-work-team {
+  background: $background-work-team;
+}
+
+.work-team-card {
+  position: unset;
+  width: 270px;
 }

@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.navigation-list-header, .navigation-list, .mobile-menu-nav-lists,
+.work-team-lists, .navigation-list-header, .navigation-list, .mobile-menu-nav-lists,
 .mobile-menu-contacts {
   margin: 0;
   padding: 0;
@@ -90,6 +90,7 @@ img {
 }
 
 .section-padding {
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -170,6 +171,7 @@ img {
   line-height: 1.143;
   text-align: center;
   letter-spacing: 0.03em;
+  color: #212121;
   margin-bottom: 30px;
 }
 
@@ -698,26 +700,20 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.advantage-box {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .advantage-lists {
   display: flex;
   margin-left: 0;
   margin-right: 0;
 }
 
-.advantage-lists-list {
+.advantage-list {
   width: 270px;
 }
-.advantage-lists-list:not(:last-child) {
+.advantage-list:not(:last-child) {
   margin-right: 30px;
 }
 
 .advantage-list-item {
-  margin-bottom: 10px;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.143;
@@ -810,26 +806,12 @@ img {
   color: #ffffff;
 }
 
-.about-work-team {
-  display: flex;
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.work-team-lists {
-  display: flex;
-}
-
-.work-team-proffession {
-  padding: 30px 32px;
-}
-
-.work-team-title {
-  margin-bottom: 10px;
-}
-
-.about-work-team {
-  background: #f5f4fa;
+@media screen and (min-width: 768px) {
+  .work-team-lists {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .our-work-team {
@@ -839,17 +821,6 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-}
-
-.work-team-card {
-  position: unset;
-  width: 270px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  background: #ffffff;
-}
-.work-team-card:not(:last-child) {
-  margin-right: 30px;
 }
 
 .work-team-title {
@@ -862,6 +833,7 @@ img {
 }
 
 .work-team-profession {
+  display: block;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.188;
@@ -871,17 +843,49 @@ img {
   margin-bottom: 16px;
 }
 
-.our-klient {
-  padding: 94px 0;
+.work-team-card {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+@media screen and (max-width: 767px) {
+  .work-team-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .work-team-card {
+    margin: 15px;
+    width: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .work-team-card:not(:last-child) {
+    margin-right: 30px;
+    width: calc((100% - 120px) / 4);
+  }
 }
 
-.title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.167;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
+.work-team-page {
+  padding: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .work-team-page {
+    padding: 30px;
+  }
+}
+
+.work-team-card-img {
+  width: 100%;
+}
+
+.about-work-team {
+  background: #f5f4fa;
+}
+
+.work-team-card {
+  position: unset;
+  width: 270px;
 }
 
 .our-klient-list {
