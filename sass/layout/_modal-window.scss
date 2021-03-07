@@ -1,38 +1,40 @@
 .backdrop {
-  position: fixed;
-  left: 0;
-  top: 0;
+  @include position-element(fixed);
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: $background-backdrop-color;
   opacity: 1;
-  transform: opasity $time $animation-function;
+  transition: opacity $time $animation-function;
 }
-
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal-window {
-  transform: translate(-50%, -50%) scale(0.8);
-}
-
 .modal-window {
-  width: 528px;
-  height: 581px;
-  border-radius: 4px;
+  @include position-element(absolute, 50%, 50%);
+  transform: translate(-50%, -50%) scale(1);
 
   background-color: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-
+  border-radius: 4px;
   transition: transform $time $animation-function;
-
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  overflow-y: scroll;
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+    overflow: scroll;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-close {
@@ -59,49 +61,42 @@
   }
 }
 
-/*=====Contact-form=====*/
+// form
+.contact-form {
+  padding: 40px;
+}
 
 .contact-form-title {
-  display: block;
-  margin-bottom: 30px;
-
   font-weight: bold;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: $title-text-color;
+  display: block;
+  margin-bottom: 30px;
 }
-
-.contact-form {
-  padding: 40px;
-}
-
-.contact-form .form-group {
-  position: relative;
-}
-
 .form-group {
+  position: relative;
   margin-bottom: 28px;
+}
+.form-input,
+.comment-place {
+  width: 100%;
+  max-width: 370px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: $border-radius;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 448px;
+  }
 }
 
 .form-input {
   position: relative;
   padding-left: 42px;
   transition: border $time $animation-function;
-
-  &:focus ~ .form-icon {
-    fill: $accent-color;
-  }
-}
-
-.form-input,
-.comment-place {
-  width: 448px;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-
   &:focus {
     outline: none;
     border: 1px solid $accent-color;
@@ -109,78 +104,101 @@
 }
 
 .form-icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
+  @include position-element(absolute, 50%, 14.5px);
+
   transform: translateY(-50%);
+  transition: fill $time $animation-function;
+}
+.form-input:focus ~ .form-icon {
+  fill: $accent-color;
 }
 
-.form-label,
 .comment-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-
+  @include position-element(absolute);
+  transform: translateY(-18px);
   font-weight: normal;
   font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.01em;
-
-  transform: translateY(-18px);
 }
-
+.form-label {
+  @extend .comment-label;
+}
 .form-comment {
   position: relative;
   margin-bottom: 20px;
 }
-
 .comment-place {
   height: 120px;
   resize: none;
   padding: 12px 16px;
   transition: border $time $animation-function;
-
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
   &::placeholder {
     font-weight: normal;
     font-size: 14px;
-    line-height: 1.143;
+    line-height: 1.14;
     letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
+    color: $placeholder-form-modal-color;
   }
 }
 
+.link-agreement {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: normal;
+  color: $accent-color;
+}
+
+//check box
+
 .form-checkbox {
   position: relative;
-  @extend %flex-centered;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
+.input-checkbox .visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 .label-checkbox {
-  display: inline-block;
+  display: inline-flex;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  margin-left: 35px;
+  align-items: center;
 
-  &::after {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 13px;
+  &::before {
     content: "";
-
+    display: inline-block;
     width: 16px;
     height: 15px;
     border: 2px solid $title-text-color;
     border-radius: 2px;
+    margin-right: 8px;
     transition: all $time $animation-function;
+  }
 
-    transform: translateY(-50%);
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
   }
 }
 
-.input-checkbox:checked + .label-checkbox::after {
+.input-checkbox:checked + .label-checkbox::before {
   border-color: $accent-color;
   background-color: $accent-color;
   background-image: url(../img/icon-check.svg);
@@ -189,20 +207,12 @@
   background-origin: border-box;
 }
 
-.input-checkbox:focus:not(:checked) + .label-checkbox::after {
-  border-color: $accent-color;
-}
-
-.input-checkbox:checked:focus + .label-checkbox::after {
+.input-checkbox:checked:focus + .label-checkbox::before {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
-.link-agreement {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-style: normal;
-  color: $accent-color;
+.input-checkbox:focus:not(:checked) + .label-checkboxl::before {
+  border-color: $accent-color;
 }
 
 .contact-form-btn {
@@ -229,3 +239,235 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
   }
 }
+
+// .backdrop {
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.2);
+//   opacity: 1;
+//   transform: opasity $time $animation-function;
+// }
+
+// .backdrop.is-hidden {
+//   opacity: 0;
+//   pointer-events: none;
+// }
+
+// .backdrop.is-hidden .modal-window {
+//   transform: translate(-50%, -50%) scale(0.8);
+// }
+
+// .modal-window {
+//   width: 528px;
+//   height: 581px;
+//   border-radius: 4px;
+
+//   background-color: $primary-white-color;
+//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+//   transition: transform $time $animation-function;
+
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%) scale(1);
+// }
+
+// .modal-close {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   margin-top: 8px;
+//   margin-right: 8px;
+
+//   @extend %flex-centered;
+//   justify-content: center;
+//   width: 30px;
+//   height: 30px;
+//   border: 1px solid rgba(0, 0, 0, 0.1);
+//   border-radius: 50%;
+//   cursor: pointer;
+
+//   transition: fill $time $animation-function;
+//   background-color: $primary-white-color;
+
+//   &:hover,
+//   &:focus {
+//     fill: $accent-color;
+//   }
+// }
+
+// /*=====Contact-form=====*/
+
+// .contact-form-title {
+//   display: block;
+//   margin-bottom: 30px;
+
+//   font-weight: bold;
+//   font-size: 20px;
+//   line-height: 1.15;
+//   text-align: center;
+//   letter-spacing: 0.03em;
+//   color: $title-text-color;
+// }
+
+// .contact-form {
+//   padding: 40px;
+// }
+
+// .contact-form .form-group {
+//   position: relative;
+// }
+
+// .form-group {
+//   margin-bottom: 28px;
+// }
+
+// .form-input {
+//   position: relative;
+//   padding-left: 42px;
+//   transition: border $time $animation-function;
+
+//   &:focus ~ .form-icon {
+//     fill: $accent-color;
+//   }
+// }
+
+// .form-input,
+// .comment-place {
+//   width: 448px;
+//   height: 40px;
+//   border: 1px solid rgba(33, 33, 33, 0.2);
+//   border-radius: 4px;
+
+//   &:focus {
+//     outline: none;
+//     border: 1px solid $accent-color;
+//   }
+// }
+
+// .form-icon {
+//   position: absolute;
+//   top: 50%;
+//   left: 12px;
+//   transform: translateY(-50%);
+// }
+
+// .form-label,
+// .comment-label {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+
+//   font-weight: normal;
+//   font-size: 12px;
+//   line-height: 1.167;
+//   letter-spacing: 0.01em;
+
+//   transform: translateY(-18px);
+// }
+
+// .form-comment {
+//   position: relative;
+//   margin-bottom: 20px;
+// }
+
+// .comment-place {
+//   height: 120px;
+//   resize: none;
+//   padding: 12px 16px;
+//   transition: border $time $animation-function;
+
+//   &::placeholder {
+//     font-weight: normal;
+//     font-size: 14px;
+//     line-height: 1.143;
+//     letter-spacing: 0.01em;
+//     color: rgba(117, 117, 117, 0.5);
+//   }
+// }
+
+// .form-checkbox {
+//   position: relative;
+//   @extend %flex-centered;
+//   margin-bottom: 30px;
+// }
+
+// .label-checkbox {
+//   display: inline-block;
+//   font-weight: normal;
+//   font-size: 14px;
+//   line-height: 1.71;
+//   letter-spacing: 0.03em;
+//   margin-left: 35px;
+
+//   &::after {
+//     display: inline-block;
+//     position: absolute;
+//     top: 50%;
+//     left: 13px;
+//     content: "";
+//  }
+//     width: 16px;
+//     height: 15px;
+//     border: 2px solid $title-text-color;
+//     border-radius: 2px;
+//     transition: all $time $animation-function;
+
+//     transform: translateY(-50%);
+//   }
+// }
+
+// .input-checkbox:checked + .label-checkbox::after {
+//   border-color: $accent-color;
+//   background-color: $accent-color;
+//   background-image: url(../img/icon-check.svg);
+//   background-size: contain;
+//   background-position: center;
+//   background-origin: border-box;
+// }
+
+// .input-checkbox:focus:not(:checked) + .label-checkbox::after {
+//   border-color: $accent-color;
+// }
+
+// .input-checkbox:checked:focus + .label-checkbox::after {
+//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 2px 1px rgba(0, 0, 0, 0.2);
+// }
+
+// .link-agreement {
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   font-style: normal;
+//   color: $accent-color;
+// }
+
+// .contact-form-btn {
+//   display: flex;
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding: 10px 55.5px;
+
+//   font-weight: bold;
+//   font-size: 16px;
+//   line-height: 1.875;
+//   letter-spacing: 0.06em;
+//   color: $primary-white-color;
+//   background-color: $accent-color;
+//   border-radius: 4px;
+//   cursor: pointer;
+//   border: 0;
+
+//   transition: box-shadow $time $animation-function;
+
+//   &:hover,
+//   &:focus {
+//     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//       0px 2px 1px rgba(0, 0, 0, 0.2);
+//   }
+// }
