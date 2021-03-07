@@ -1,8 +1,10 @@
-.logo-header {
-  display: flex;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
+.navigation {
+  &.logo-header {
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
 }
 
 .logo-header,

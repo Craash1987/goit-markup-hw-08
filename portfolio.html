@@ -39,24 +39,75 @@
                         <a class="navigation-list-link  link" href="#">Контакты</a> </li>
                 </ul>
             </nav> 
-                <!--Contacts menu-->
-                <ul class="navigation-list-header">
-                    <li class="contact-list-mail list"> 
-                        <a class="contact-link-mail link" href="mailto:info@devstudio.com">
-                           <svg class="mail-icon" width="16" height="12">
-                                <use href="./img/sprite.svg#icon-mail"></use>
-                           </svg>
-                           info@devstudio.com</a> </li>
-                    <li class="contact-list-tel list"> 
-                        <a class="contact-link-tel link" href="tel:+380961111111">
-                           <svg class="tel-icon" width="10" height="16">
-                                <use href="./img/sprite.svg#icon-telephone"></use>
-                            </svg>
-                            +38 096 111 11 11</a> </li>
-                </ul>
+
+            <button class="burger-mobile-btn" type="button" data-menu-button>
+                <svg class="burger-icon">
+                    <use href="./img/sprite.svg#menu_icon"></use>
+                </svg>
+            </button>
+
+        
+            <ul class="navigation-list-header">
+                <li class="contact-list-mail list"> 
+                    <a class="contact-link-mail link" href="mailto:info@devstudio.com">
+                        <svg class="mail-icon" width="16" height="12">
+                            <use href="./img/sprite.svg#icon-mail"></use>
+                        </svg>
+                        info@devstudio.com</a> </li>
+                <li class="contact-list-tel list"> 
+                    <a class="contact-link-tel link" href="tel:+380961111111">
+                        <svg class="tel-icon" width="10" height="16">
+                            <use href="./img/sprite.svg#icon-telephone"></use>
+                        </svg>
+                        +38 096 111 11 11</a> </li>
+            </ul>
+            <div class="mobile-menu" data-menu>
+                <button class="mobile-close-btn" type="button" data-menu-close>
+                    <svg class="close-icon">
+                        <use href="./img/sprite.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <div class="mobile-menu-wrapper">
+                    <ul class="mobile-menu-nav-lists">
+                        <li class="mobile-menu-nav__item list">
+                            <a class="mobile-menu-nav-link link" href="./index.html">Студия</a>
+                        </li>
+                        <li class="mobile-menu-nav__item list">
+                            <a class="mobile-menu-nav-link current-link link" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="mobile-menu-nav__item list">
+                            <a class="mobile-menu-nav-link  link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu-contacts">
+                        <li class="mobile-menu-contact-list__item list">
+                            <a class="mobile-menu-contact-link-tel tel link" href="tel:+380961111111">
+                                +38 096 111 11 11</a>
+                        </li>
+                        <li class="mobile-menu-contact-list__item list">
+                            <a class="mobile-menu-contact-link-mail link" href="mailto:info@devstudio.com">
+                                info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu-social-links">
+                        <li class="mobile-menu-social-link__item list">
+                            <a href="" class="mobile-menu-social-link link">Instagram</a>
+                        </li>
+                        <li class="mobile-menu-social-link__item list">
+                            <a href="" class="mobile-menu-social-link link">Twitter</a>
+                        </li>
+                        <li class="mobile-menu-social-link__item list">
+                            <a href="" class="mobile-menu-social-link link">Facebook</a>
+                        </li>
+                        <li class="mobile-menu-social-link__item list">
+                            <a href="" class="mobile-menu-social-link link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>   
      </header>
-    <!-- <div class="container"></div> -->
+    <div class="container"></div>
 
      <main class="main-conteiner-btns-end-links">
          <section class="potfolio-btns section-padding">
@@ -464,7 +515,7 @@
          </section>
      </main>
  
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-contant">
                 <div class="footer-wrapper">
@@ -528,6 +579,10 @@
                 </form>
             </div>
         </div>
-    </footer> -->
+    </footer> 
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+
 </body>
 </html>
