@@ -2,6 +2,18 @@
   border-bottom: 1px solid #ececec;
 }
 
+.header .container {
+  @include centered-flex();
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation-list {
+  display: flex;
+}
+
 .burger-mobile-btn,
 .mobile-close-btn {
   background-color: transparent;
@@ -21,15 +33,15 @@
     color: $title-text-color;
     letter-spacing: 0.02em;
 
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+
     @media screen and (min-width: $desktop) {
       font-size: 14px;
       line-height: 1.142;
       @include centered-flex();
     }
-  }
-
-  @media screen and (min-width: $tablet) {
-    display: none;
   }
 }
 .mobile-close-btn {
