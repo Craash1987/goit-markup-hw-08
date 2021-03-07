@@ -19,12 +19,17 @@ $footer-service-background-color: #2f303a;
 $color-icon-our-klient: #afb1b8;
 $color-link-footer: rgba(255, 255, 255, 0.6);
 $color-link-icon-footer: rgba(255, 255, 255, 0.1);
+$placeholder-form-send-color: rgba(255, 255, 255, 0.6);
+$placeholder-form-modal-color: rgba(117, 117, 117, 0.5);
+$background-backdrop-color: rgba(0, 0, 0, 0.2);
 //ANIMATION
 $time: 250ms;
 $animation-function: cubic-bezier(0.4, 0, 0.2, 1);
 //FONTS
 $mainFont: "Roboto", sans-serif;
 $secondFont: "Raleway", sans-serif;
+
+$border-radius: 4px;
 
 //INDENT SECTION
 $padding-top-section: 94px;
