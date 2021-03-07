@@ -12,3 +12,13 @@
   padding-top: $padding-top;
   padding-bottom: $padding-bottom;
 }
+
+@mixin paddings-t-b($size) {
+  padding-top: $size;
+  padding-bottom: $size;
+}
+
+@mixin paddings-r-l($size-r-l) {
+  padding-right: $size-r-l;
+  padding-left: $size-r-l;
+}

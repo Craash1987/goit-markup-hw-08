@@ -26,6 +26,8 @@ $bg-overlay-card: rgba(33, 150, 243, 0.9);
 //ANIMATION
 $time: 250ms;
 $animation-function: cubic-bezier(0.4, 0, 0.2, 1);
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-duration: 250ms;
 //FONTS
 $mainFont: "Roboto", sans-serif;
 $secondFont: "Raleway", sans-serif;
