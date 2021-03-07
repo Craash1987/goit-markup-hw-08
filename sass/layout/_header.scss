@@ -2,28 +2,15 @@
   border-bottom: 1px solid #ececec;
 }
 
-.navigation-list {
-  display: none;
+@media screen and(max-width:767px) {
+  .navigation-list {
+    display: none;
+  }
+
+  .navigation-list-header {
+    display: none;
+  }
 }
-
-.mail-icon,
-.tel-icon {
-  display: none;
-}
-
-.navigation-list-header {
-  display: none;
-}
-
-// @media screen and(max-width:767px) {
-//   .navigation-list {
-//     display: none;
-//   }
-
-//   .navigation-list-header {
-//     display: none;
-//   }
-// }
 @media screen and(min-width:768px) {
   .burger-mobile-btn {
     display: none;
