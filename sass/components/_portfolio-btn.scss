@@ -1,30 +1,15 @@
-.potfolio-btns {
-  padding-top: 94px;
-  padding-bottom: 79px;
-}
-
-.potfolio-toolbar-lists {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 35px;
-}
-
-.potfolio-toolbar-item:not(:last-child) {
-  margin-right: 8px;
-}
-
 .potfolio-toolbar-btn {
-  padding: 6px 22px;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.625;
+  font-size: $button-font-size;
+  line-height: 1.6;
   text-align: center;
   letter-spacing: 0.03em;
   color: $title-text-color;
-  border: 0px solid transparent;
-  border-radius: 4px;
-  background: $background-work-team;
+  font-family: $mainFont;
   cursor: pointer;
+  padding: 6px 22px;
+  border-radius: $border-radius;
+  border: 0;
 
   transition: color $time $animation-function,
     background-color $time $animation-function,
@@ -32,9 +17,29 @@
 
   &:hover,
   &:focus {
-    background: $accent-color;
     color: $primary-white-color;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+}
+
+.potfolio-toolbar-lists {
+  @extend %list;
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  margin: -4px;
+  margin-bottom: 36px;
+
+  @media screen and (min-width: $tablet) {
+    @include centered-flex();
+  }
+}
+
+.potfolio-toolbar-item {
+  margin: 4px;
+}
+
+.potfolio-toolbar-item:not(:last-child) {
+  margin-right: 8px;
 }

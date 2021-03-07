@@ -10,15 +10,15 @@
   overflow: hidden;
 }
 
-.contact-lists, .navigation-list-header, .navigation-list, .mobile-menu-nav-lists,
-.mobile-menu-contacts {
+.contact-lists, .project-lists, .navigation-list-header, .navigation-list, .mobile-menu-nav-lists,
+.mobile-menu-contacts, .potfolio-toolbar-lists {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .contact-link-tel-footer,
-.contact-link-mail-footer, .contact-link-mail,
+.contact-link-mail-footer, .project-link, .contact-link-mail,
 .contact-link-tel, .navigation-list-link, .mobile-menu-nav-link,
 .mobile-menu-contact-link-mail,
 .mobile-menu-contact-link-tel {
@@ -260,39 +260,46 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.potfolio-btns {
-  padding-top: 94px;
-  padding-bottom: 79px;
+.potfolio-toolbar-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.potfolio-toolbar-btn:hover, .potfolio-toolbar-btn:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .potfolio-toolbar-lists {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 35px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: -4px;
+  margin-bottom: 36px;
+}
+@media screen and (min-width: 768px) {
+  .potfolio-toolbar-lists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.potfolio-toolbar-item {
+  margin: 4px;
 }
 
 .potfolio-toolbar-item:not(:last-child) {
   margin-right: 8px;
-}
-
-.potfolio-toolbar-btn {
-  padding: 6px 22px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.625;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  border: 0px solid transparent;
-  border-radius: 4px;
-  background: #f5f4fa;
-  cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.potfolio-toolbar-btn:hover, .potfolio-toolbar-btn:focus {
-  background: #2196f3;
-  color: #ffffff;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .navigation-list-item .navigation-list-link.current-link::after {
@@ -755,23 +762,89 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.main-conteiner-btns {
+  background-color: #ffffff;
+}
+@media screen and (max-width: 1199px) {
+  .main-conteiner-btns {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main-conteiner-btns {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main-conteiner-btns {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.main-conteiner-btns-top {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+.main-conteiner-btns-team {
+  background-color: #f5f4fa;
+}
+@media screen and (max-width: 1199px) {
+  .main-conteiner-btns-team {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main-conteiner-btns-team {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main-conteiner-btns-team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .project-lists {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -15px;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .project-lists {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .project-list-item {
-  width: 370px;
-  box-sizing: border-box;
-  margin: 15px;
-  border: 1px solid #eeeeee;
-  cursor: pointer;
-  background: #ffffff;
+  outline: 1px solid #eeeeee;
+}
+@media screen and (max-width: 767px) {
+  .project-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .project-list-item {
+    margin: 15px;
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project-list-item {
+    margin: 15px;
+    width: 370px;
+  }
 }
 
 .project-link {
   display: inline-block;
+  width: 100%;
   margin-top: 0;
   margin-bottom: 0;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -779,36 +852,64 @@ img {
 .project-link:hover, .project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.project-link:hover .overlay, .project-link:focus .overlay {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.project-link-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.project-characteristics {
-  padding: 20px 24px;
-}
 
 .project-title {
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin-bottom: 4px;
   color: #212121;
+  margin-top: 0;
+  margin-bottom: 4px;
 }
 
 .project-tools {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: normal;
   font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.03em;
+  line-height: 1.87;
   color: #757575;
+}
+
+.project-link-img {
+  width: 100%;
+  margin-top: 0;
+}
+
+.project-link-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+}
+.portfolio:hover .overlay, .portfolio:focus .overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.overlay__text {
+  margin: 0;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.project-characteristics {
+  padding: 20px 24px;
 }
 
 .project-link-img-wrapper {
