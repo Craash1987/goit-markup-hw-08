@@ -637,6 +637,8 @@ img {
 .project-lists {
   padding: 0;
   margin: 0;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 @media screen and (min-width: 768px) {
   .project-lists {
@@ -647,6 +649,9 @@ img {
 }
 
 .project-list-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
   outline: 1px solid #eeeeee;
 }
 @media screen and (max-width: 767px) {
@@ -1004,5 +1009,62 @@ img {
   }
   100% {
     transform: scaleX(1);
+  }
+}
+.send-form {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .send-form {
+    margin-left: auto;
+  }
+}
+
+.form-place {
+  display: block;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .form-place {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 150px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form-place {
+    display: flex;
+  }
+}
+
+.fsubscribe-input {
+  padding: 15px 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fsubscribe-input:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.fsubscribe-input::placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 1200px) {
+  .fsubscribe-input {
+    width: 388px;
+    margin-right: 12px;
+    margin-bottom: 0;
   }
 }/*# sourceMappingURL=portfolio.css.map */
