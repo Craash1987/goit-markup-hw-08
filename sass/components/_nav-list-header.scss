@@ -1,0 +1,55 @@
+.navigation-list-header {
+  @extend %list;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.171;
+  color: $primary-text-color;
+  letter-spacing: 0.02em;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.142;
+    @include centered-flex();
+  }
+}
+
+.contact-list-item:not(:last-child) {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+}
+.contact-list-item + .contact-list-item {
+  @media screen and (min-width: $desktop) {
+    margin-left: 30px;
+  }
+}
+
+.contact-link-mail,
+.contact-link-tel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: $primary-text-color;
+  margin-left: auto;
+}
+
+/* Иконки Tel, mail */
+
+.contact-link-mail,
+.contact-link-tel {
+  @extend %link;
+  fill: currentColor;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.mail-icon,
+.tel-icon {
+  margin-right: 8px;
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 10px;
+  }
+}

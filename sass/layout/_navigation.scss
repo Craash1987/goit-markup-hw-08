@@ -1,0 +1,84 @@
+.navigation-list,
+.navigation-list-header {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  @include centered-flex();
+}
+
+.navigation-list {
+  @extend %list;
+  font-weight: 500;
+  line-height: 1.14;
+  color: $title-text-color;
+  letter-spacing: 0.02em;
+}
+
+.navigation-list-link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  transition-property: color;
+  transition-duration: $time;
+  transition-timing-function: $animation-function;
+}
+
+.navigation-list-link {
+  @extend %link;
+  color: $title-text-color;
+  &.current-link {
+    position: relative;
+    color: $accent-color;
+  }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.navigation-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 88px;
+  }
+}
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+// Подчеркивание текущей ссылки
+.navigation-list-link .current-link::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: $accent-color;
+  border-radius: 2px;
+  animation-name: scale;
+  animation-duration: 250ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  transform-origin: center left;
+}
+
+@keyframes scale {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
