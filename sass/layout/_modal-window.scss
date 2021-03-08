@@ -29,7 +29,7 @@
     max-width: 450px;
     height: 95%;
     max-height: 609px;
-    overflow-y: scroll;
+    overflow: scroll;
   }
   @media screen and (min-width: $desktop) {
     max-width: 528px;
