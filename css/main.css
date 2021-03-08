@@ -73,6 +73,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .address {
@@ -1538,8 +1540,8 @@ img {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .form-place {
     display: flex;
-    flex-wrap: wrap;
-    padding: 0 150px;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 1200px) {

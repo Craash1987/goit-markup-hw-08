@@ -11,8 +11,8 @@
 
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
   }
   @media screen and (min-width: $desktop) {
     display: flex;
