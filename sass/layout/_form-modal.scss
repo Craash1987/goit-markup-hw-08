@@ -1,0 +1,90 @@
+.contact-form {
+  padding: 40px;
+}
+
+.contact-form-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $title-text-color;
+  display: block;
+  margin-bottom: 30px;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 28px;
+}
+.form-input,
+.comment-place {
+  width: 100%;
+  max-width: 370px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: $border-radius;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 448px;
+  }
+}
+
+.form-input {
+  position: relative;
+  padding-left: 42px;
+  transition: border $time $animation-function;
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
+}
+
+.form-icon {
+  @include position-element(absolute, 50%, 14.5px);
+
+  transform: translateY(-50%);
+  transition: fill $time $animation-function;
+}
+.form-input:focus ~ .form-icon {
+  fill: $accent-color;
+}
+
+.form-coment__label {
+  @include position-element(absolute);
+  transform: translateY(-18px);
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+}
+.form-label {
+  @extend .comment-label;
+}
+.form-comment {
+  position: relative;
+  margin-bottom: 20px;
+}
+.comment-place {
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  transition: border $time $animation-function;
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
+  &::placeholder {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: $placeholder-form-modal-color;
+  }
+}
+
+.link-agreement {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: normal;
+  color: $accent-color;
+}
