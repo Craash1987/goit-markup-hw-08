@@ -1,6 +1,5 @@
 .contact-form {
   padding: 40px;
-  overflow-y: scroll;
 }
 
 .contact-form-title {
@@ -29,18 +28,6 @@
     max-width: 448px;
   }
 }
-
-// цаплюкЕлена Goit Student, [09.03.21 09: 12] form-modal__input,
-//   .form-coment__field {
-//   width: 100%;
-//   max-width: 370px;
-//   height: 40px;
-//   border: 1px solid rgba(33, 33, 33, 0.2);
-//   border-radius: $border-radius;
-//   @media screen and (min-width: $desktop) {
-//     max-width: 448px;
-//   }
-// }
 
 .form-input {
   position: relative;

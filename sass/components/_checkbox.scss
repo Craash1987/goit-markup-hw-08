@@ -1,6 +1,6 @@
 .form-checkbox {
   position: relative;
-  display: block;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
@@ -55,29 +55,4 @@
 }
 .input-checkbox:focus:not(:checked) + .label-checkbox::before {
   border-color: $accent-color;
-}
-
-.contact-form-btn {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 55.5px;
-
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
-  color: $primary-white-color;
-  background-color: $accent-color;
-  border-radius: 4px;
-  cursor: pointer;
-  border: 0;
-
-  transition: box-shadow $time $animation-function;
-
-  &:hover,
-  &:focus {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-  }
 }
