@@ -1,5 +1,14 @@
 .contact-form {
   padding: 40px;
+  width: 95%;
+  min-width: 450px;
+  height: 95%;
+  overflow-y: scroll;
+
+  @media screen and (min-width: 1200px) {
+    width: 530px;
+    height: 580;
+  }
 }
 
 .contact-form-title {
@@ -49,7 +58,7 @@
   fill: $accent-color;
 }
 
-.form-coment__label {
+.comment-label {
   @include position-element(absolute);
   transform: translateY(-18px);
   font-weight: normal;

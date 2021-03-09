@@ -20,16 +20,19 @@
 @import "./components/curent-link-header";
 @import "./components/thumb";
 @import "./components/nav-list-header";
+@import "./components/checkbox";
+@import "./components/contact-form-btn";
 
 //LAYOUT
 @import "./layout/header";
+@import "./layout/navigation";
 @import "./layout/services";
 @import "./layout/advantages";
 @import "./layout/work-instrunents";
 @import "./layout/about-work-team";
 @import "./layout/our-klient";
 @import "./layout/footer";
-@import "./layout/modal-window";
 @import "./layout/footer-form-send";
-@import "./layout/navigation";
+// @import "./layout/modal-window";
+@import "./layout/backdrop-modal";
 @import "./layout/form-modal";

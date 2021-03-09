@@ -181,7 +181,6 @@ img {
 .social-list-footer {
   display: flex;
   justify-content: center;
-  cursor: pointer;
 }
 
 .social-list-icon,
@@ -211,6 +210,7 @@ img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  cursor: pointer;
   fill: currentColor;
   color: #afb1b8;
   background-color: #ffffff;
