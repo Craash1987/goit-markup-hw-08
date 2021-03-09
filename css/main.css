@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.our-klient-list-link, .service-btn {
+.modal-close, .our-klient-list-link, .service-btn {
   display: flex;
   align-items: center;
 }
@@ -182,7 +182,7 @@ img {
     margin-bottom: 50px;
   }
 }
-.our-klient-list-link, .service-btn {
+.modal-close, .our-klient-list-link, .service-btn {
   display: flex;
   align-items: center;
 }
@@ -211,7 +211,7 @@ img {
   color: #2196f3;
 }
 
-.our-klient-list-link, .service-btn {
+.modal-close, .our-klient-list-link, .service-btn {
   display: flex;
   align-items: center;
 }
@@ -417,7 +417,7 @@ img {
 
 .form-checkbox {
   position: relative;
-  display: block;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
@@ -435,7 +435,8 @@ img {
 }
 
 .label-checkbox {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   font-weight: normal;
   font-size: 12px;
   line-height: 1.71;
@@ -444,7 +445,8 @@ img {
 }
 .label-checkbox::before {
   content: "";
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -477,26 +479,6 @@ img {
 
 .contact-form-btn {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 55.5px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  background-color: #2196f3;
-  border-radius: 4px;
-  cursor: pointer;
-  border: 0;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contact-form-btn:hover, .contact-form-btn:focus {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.contact-form-btn {
-  display: inline-block;
   margin-left: auto;
   margin-right: auto;
   padding: 10px 55.5px;
@@ -1328,6 +1310,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .modal-window {
+    width: 95%;
     max-width: 528px;
     height: 581px;
   }
@@ -1339,6 +1322,7 @@ img {
   right: 0;
   margin-top: 8px;
   margin-right: 8px;
+  justify-content: center;
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1353,8 +1337,8 @@ img {
 
 .contact-form {
   padding: 40px;
-  overflow-y: scroll;
 }
+
 .contact-form-title {
   font-weight: bold;
   font-size: 20px;
