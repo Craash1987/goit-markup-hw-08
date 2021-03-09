@@ -1349,6 +1349,12 @@ img {
   display: block;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .contact-form-title {
+    width: 100%;
+    max-width: 448px;
+  }
+}
 
 .form-group {
   position: relative;

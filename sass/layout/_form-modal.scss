@@ -11,7 +11,13 @@
   color: $title-text-color;
   display: block;
   margin-bottom: 30px;
+
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+    max-width: 448px;
+  }
 }
+
 .form-group {
   position: relative;
   margin-bottom: 28px;
