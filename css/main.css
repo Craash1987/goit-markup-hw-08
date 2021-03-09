@@ -417,6 +417,9 @@ img {
 
 .form-checkbox {
   position: relative;
+  display: block;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -432,6 +435,7 @@ img {
 }
 
 .label-checkbox {
+  display: inline-flex;
   font-weight: normal;
   font-size: 12px;
   line-height: 1.71;
@@ -492,6 +496,9 @@ img {
 }
 
 .contact-form-btn {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px 55.5px;
   font-weight: bold;
   font-size: 16px;
@@ -1346,18 +1353,8 @@ img {
 
 .contact-form {
   padding: 40px;
-  width: 95%;
-  min-width: 450px;
-  height: 95%;
   overflow-y: scroll;
 }
-@media screen and (min-width: 1200px) {
-  .contact-form {
-    width: 530px;
-    height: 580;
-  }
-}
-
 .contact-form-title {
   font-weight: bold;
   font-size: 20px;
@@ -1365,6 +1362,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  display: block;
   margin-bottom: 30px;
 }
 

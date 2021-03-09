@@ -1,8 +1,8 @@
 .form-checkbox {
   position: relative;
-  // display: block;
-  // align-items: center;
-  // justify-content: center;
+  display: block;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 .input-checkbox .visually-hidden {
@@ -17,7 +17,7 @@
 }
 
 .label-checkbox {
-  // display: inline-flex;
+  display: inline-flex;
   font-weight: normal;
   font-size: 12px;
   line-height: 1.71;
