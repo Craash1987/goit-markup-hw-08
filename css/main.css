@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.modal-close, .our-klient-list-link, .service-btn {
+.our-klient-list-link, .service-btn {
   display: flex;
   align-items: center;
 }
@@ -182,7 +182,7 @@ img {
     margin-bottom: 50px;
   }
 }
-.modal-close, .our-klient-list-link, .service-btn {
+.our-klient-list-link, .service-btn {
   display: flex;
   align-items: center;
 }
@@ -211,7 +211,7 @@ img {
   color: #2196f3;
 }
 
-.modal-close, .our-klient-list-link, .service-btn {
+.our-klient-list-link, .service-btn {
   display: flex;
   align-items: center;
 }
@@ -417,9 +417,6 @@ img {
 
 .form-checkbox {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -435,7 +432,6 @@ img {
 }
 
 .label-checkbox {
-  display: inline-flex;
   font-weight: normal;
   font-size: 12px;
   line-height: 1.71;
@@ -496,9 +492,6 @@ img {
 }
 
 .contact-form-btn {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
   padding: 10px 55.5px;
   font-weight: bold;
   font-size: 16px;
@@ -1339,7 +1332,6 @@ img {
   right: 0;
   margin-top: 8px;
   margin-right: 8px;
-  justify-content: center;
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1373,7 +1365,6 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-  display: block;
   margin-bottom: 30px;
 }
 
