@@ -784,16 +784,18 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .social-container-footer {
-    display: block;
-    margin-left: 72px;
-  }
+.social-container-footer {
+  display: block;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .social-container-footer {
-    display: block;
     margin-bottom: 102px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .social-container-footer {
+    margin-left: 72px;
   }
 }
 
