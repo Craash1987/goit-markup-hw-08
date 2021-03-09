@@ -12,7 +12,6 @@
 }
 
 .modal-window {
-  flex-basis: auto;
   @include position-element(absolute, 50%, 50%);
   transform: translate(-50%, -50%) scale(1);
 
@@ -26,11 +25,11 @@
     transform: translate(-50%, -50%) scale(0.8);
   }
   @media screen and (max-width: 1199px) {
-    width: 100%;
+    width: 95%;
     max-width: 450px;
     height: 95%;
     max-height: 609px;
-    overflow: scroll;
+    overflow-y: scroll;
   }
   @media screen and (min-width: $desktop) {
     max-width: 528px;
