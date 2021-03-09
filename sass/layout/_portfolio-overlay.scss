@@ -23,3 +23,9 @@
   padding: 63px 24px;
   color: $primary-white-color;
 }
+
+.project-link:hover .overlay,
+.project-link:focus .overlay {
+  transform: translateY(0);
+  opacity: 1;
+}

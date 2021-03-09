@@ -1,34 +1,34 @@
-.main-conteiner-btns {
-  background-color: $primary-white-color;
-  @media screen and (max-width: 1199px) {
-    @include section-padding(80px, 80px);
-  }
-  @media screen and (max-width: 767px) {
-    @include section-padding(60px, 60px);
-  }
+// .main-conteiner-btns {
+//   background-color: $primary-white-color;
+//   @media screen and (max-width: 1199px) {
+//     @include section-padding(80px, 80px);
+//   }
+//   @media screen and (max-width: 767px) {
+//     @include section-padding(60px, 60px);
+//   }
 
-  @media screen and (min-width: 1200px) {
-    @include section-padding();
-  }
+//   @media screen and (min-width: 1200px) {
+//     @include section-padding();
+//   }
 
-  &-top {
-    @include section-padding(0);
-  }
+//   &-top {
+//     @include section-padding(0);
+//   }
 
-  &-team {
-    background-color: $background-work-team;
-    @media screen and (max-width: 1199px) {
-      @include section-padding(80px, 80px);
-    }
-    @media screen and (max-width: 767px) {
-      @include section-padding(60px, 60px);
-    }
+//   &-team {
+//     background-color: $background-work-team;
+//     @media screen and (max-width: 1199px) {
+//       @include section-padding(80px, 80px);
+//     }
+//     @media screen and (max-width: 767px) {
+//       @include section-padding(60px, 60px);
+//     }
 
-    @media screen and (min-width: 1200px) {
-      @include section-padding();
-    }
-  }
-}
+//     @media screen and (min-width: 1200px) {
+//       @include section-padding();
+//     }
+//   }
+// }
 
 //Projects card
 
@@ -47,7 +47,7 @@
 }
 
 .project-list-item {
-  flex-basis: calc(100% / 2 - 30px);
+  flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
   border: 1px solid #eeeeee;
@@ -62,12 +62,12 @@
 
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
     margin: 15px;
-    width: calc((100% - 60px) / 2);
+    flex-basis: calc((100% / 2 - 30px));
   }
 
   @media screen and (min-width: $desktop) {
     margin: 15px;
-    width: calc((100% - 90px) / 3);
+    width: calc((100% - 120px) / 4);
   }
 }
 
@@ -109,39 +109,42 @@
   margin-top: 0;
 }
 
-.project-link-img-wrapper {
-  position: relative;
-  overflow: hidden;
-}
+// .project-link-img-wrapper {
+//   position: relative;
+//   overflow: hidden;
+// }
 
-.overlay {
-  @include position-element(absolute);
-  width: 100%;
-  height: 100%;
-  padding: 63px 24px;
-  background-color: $bg-overlay-card;
-  transform: translateY(100%);
-  transition: transform $time $animation-function;
-  opacity: 0;
+// .overlay {
+//   @include position-element(absolute);
+//   width: 100%;
+//   height: 100%;
+//   padding: 63px 24px;
+//   background-color: $bg-overlay-card;
+//   transform: translateY(100%);
+//   transition: transform $time $animation-function;
+//   opacity: 0;
 
-  .portfolio:hover &,
-  .portfolio:focus & {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.overlay__text {
-  margin: 0;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  color: $primary-white-color;
-}
+//   .portfolio:hover &,
+//   .portfolio:focus & {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
+// .overlay__text {
+//   margin: 0;
+//   font-weight: normal;
+//   font-size: 18px;
+//   line-height: 1.56;
+//   letter-spacing: 0.03em;
+//   color: $primary-white-color;
+// }
+
 .project-characteristics {
   padding: 20px 24px;
-}
 
-.project-characteristics.wrap {
-  padding: 20px 24px 56px 24px;
+  &.wrap {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      padding: 20px 24px 56px 24px;
+    }
+  }
 }
