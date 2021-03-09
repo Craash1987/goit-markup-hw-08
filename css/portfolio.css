@@ -816,13 +816,17 @@ img {
 
 .footer-address {
   text-align: center;
-  margin-right: 165px;
   margin-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .footer-address {
     margin-bottom: 0;
     text-align: left;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-address {
+    margin-right: 165px;
   }
 }
 
@@ -851,16 +855,16 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .social-container-footer {
-    display: block;
-    margin-bottom: 102px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .social-container-footer {
     display: block;
     margin-left: 72px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .social-container-footer {
+    display: block;
+    margin-bottom: 102px;
   }
 }
 

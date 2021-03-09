@@ -36,13 +36,18 @@
 }
 .footer-address {
   text-align: center;
-  margin-right: 165px;
   margin-bottom: 60px;
+
   @media screen and(min-width: $desktop) {
     margin-bottom: 0;
     text-align: left;
   }
+
+  @media screen and(min-width: $tablet) and (max-width: 1199px) {
+    margin-right: 165px;
+  }
 }
+
 .footer-wrapper {
   @media screen and(min-width: $tablet) {
     display: flex;
@@ -70,13 +75,13 @@
 }
 
 .social-container-footer {
-  @media screen and(min-width: $tablet) {
-    display: block;
-    margin-bottom: 102px;
-  }
   @media screen and(min-width: $desktop) {
     display: block;
     margin-left: 72px;
+  }
+  @media screen and(min-width: $tablet) and (max-width: 1199px) {
+    display: block;
+    margin-bottom: 102px;
   }
 }
 
